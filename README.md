@@ -25,7 +25,9 @@ This project is an automated salary distribution system using Ethereum (ETH) tok
 
 #### Clone the Repository
 Clone the repository using:
-`git clone git@github.com:sherpalden/sal-dist.git`
+```
+git clone git@github.com:sherpalden/sal-dist.git
+```
 
 
 #### Environment Setup
@@ -47,17 +49,20 @@ Follow these steps to run the application:
 
 1. **Create Wallet**:
 ```Go
-go run cmd/wallet/wallet.go passphrase=password keypath=./wallet/keystores/employees```
+go run cmd/wallet/wallet.go passphrase=password keypath=./wallet/keystores/employees
+```
 
 
 2. **Create Employee**:
 ```Go
-go run cmd/employee/employee.go -id="123" -name="John Doe" -walletaddress="f8fe52bf219d1ec036e7d1c7f29691775b8f7eb9" -salary="50000"```
+go run cmd/employee/employee.go -id="123" -name="John Doe" -walletaddress="f8fe52bf219d1ec036e7d1c7f29691775b8f7eb9" -salary="50000"
+```
 
 
 3. **Balance Inquiry**:
 ```Go
-go run cmd/balance/balance.go```
+go run cmd/balance/balance.go
+```
 
 
 ### Additional Resources
