@@ -15,7 +15,10 @@ import (
 
 func main() {
 	c := cron.New()
-	c.AddFunc("*/1 * * * *", func() {
+	/* sec min hr dayOfMonth month dayOfWeek
+	cron specification (0 0 0 1 * *) in Golang schedules a job to run at midnight on the first day of every month.
+	*/
+	c.AddFunc("0 */1 * * * *", func() {
 		env := appConfig.GetEnv()
 		client, err := ethclient.DialContext(context.Background(), env.NetworkURl)
 		if err != nil {

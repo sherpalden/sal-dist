@@ -30,7 +30,7 @@ func (tx Transaction) Execute(cl *ethclient.Client) error {
 		return err
 	}
 
-	txn := ethTypes.NewTransaction(nonce, tx.ToAccount.Address, tx.Value, 21000, gasPrice, nil)
+	txn := ethTypes.NewTransaction(nonce, tx.ToAccount.Address, tx.Value, 31000, gasPrice, nil)
 
 	txn, err = ethTypes.SignTx(txn, ethTypes.NewEIP155Signer(chainId), &tx.Sender.privateKey)
 	if err != nil {

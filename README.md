@@ -49,7 +49,7 @@ Follow these steps to run the application:
 
 1. **Create Wallet**:
 ```Go
-go run cmd/wallet/wallet.go passphrase=password keypath=./wallet/keystores/employees
+go run cmd/wallet/wallet.go -passphrase=password -keypath=./wallet/keystores/employees
 ```
 
 
@@ -58,10 +58,14 @@ go run cmd/wallet/wallet.go passphrase=password keypath=./wallet/keystores/emplo
 go run cmd/employee/employee.go -id="123" -name="John Doe" -walletaddress="f8fe52bf219d1ec036e7d1c7f29691775b8f7eb9" -salary="50000"
 ```
 
-
 3. **Balance Inquiry**:
 ```Go
 go run cmd/balance/balance.go
+```
+
+4. **Run the application**:
+```Go
+go run cmd/main.go
 ```
 
 
